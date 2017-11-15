@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AB162841FAC2ACE00E0F81F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162831FAC2ACE00E0F81F /* AppDelegate.swift */; };
+		7AB162861FAC2ACE00E0F81F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162851FAC2ACE00E0F81F /* RootViewController.swift */; };
+		7AB162881FAC2ACE00E0F81F /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162871FAC2ACE00E0F81F /* DataViewController.swift */; };
+		7AB1628A1FAC2ACE00E0F81F /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162891FAC2ACE00E0F81F /* ModelController.swift */; };
+		7AB1628F1FAC2ACE00E0F81F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB1628E1FAC2ACE00E0F81F /* Assets.xcassets */; };
+		7AB162921FAC2ACE00E0F81F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB162901FAC2ACE00E0F81F /* LaunchScreen.storyboard */; };
+		7AB1629D1FAC2ACE00E0F81F /* FlaskRecallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1629C1FAC2ACE00E0F81F /* FlaskRecallTests.swift */; };
+		7AB162A81FAC2ACE00E0F81F /* FlaskRecallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162A71FAC2ACE00E0F81F /* FlaskRecallUITests.swift */; };
+		7ACE0D451FAC3E98008F24DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE0D431FAC3E98008F24DB /* MainViewController.swift */; };
+		7ACE0D461FAC3E98008F24DB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACE0D441FAC3E98008F24DB /* MainViewController.xib */; };
+		7ADED50B1FB99A7E009FA13A /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADED5091FB99A7E009FA13A /* BrowserViewController.swift */; };
+		7ADED50C1FB99A7E009FA13A /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADED50A1FB99A7E009FA13A /* BrowserViewController.xib */; };
+		7ADED50E1FBA1AD9009FA13A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADED50D1FBA1AD9009FA13A /* PreviewViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7AB162991FAC2ACE00E0F81F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AB162781FAC2ACD00E0F81F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AB1627F1FAC2ACD00E0F81F;
+			remoteInfo = FlaskRecall;
+		};
+		7AB162A41FAC2ACE00E0F81F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AB162781FAC2ACD00E0F81F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AB1627F1FAC2ACD00E0F81F;
+			remoteInfo = FlaskRecall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7ADED4C51FB97DE6009FA13A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A78E12B1FB17D3800B84752 /* FlaskRecall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlaskRecall.entitlements; sourceTree = "<group>"; };
+		7AB162801FAC2ACE00E0F81F /* FlaskRecall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlaskRecall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB162831FAC2ACE00E0F81F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7AB162851FAC2ACE00E0F81F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		7AB162871FAC2ACE00E0F81F /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		7AB162891FAC2ACE00E0F81F /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		7AB1628E1FAC2ACE00E0F81F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AB162911FAC2ACE00E0F81F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AB162931FAC2ACE00E0F81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AB162981FAC2ACE00E0F81F /* FlaskRecallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaskRecallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB1629C1FAC2ACE00E0F81F /* FlaskRecallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskRecallTests.swift; sourceTree = "<group>"; };
+		7AB1629E1FAC2ACE00E0F81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AB162A31FAC2ACE00E0F81F /* FlaskRecallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaskRecallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB162A71FAC2ACE00E0F81F /* FlaskRecallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskRecallUITests.swift; sourceTree = "<group>"; };
+		7AB162A91FAC2ACE00E0F81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ACE0D431FAC3E98008F24DB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7ACE0D441FAC3E98008F24DB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		7ADED5091FB99A7E009FA13A /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		7ADED50A1FB99A7E009FA13A /* BrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowserViewController.xib; sourceTree = "<group>"; };
+		7ADED50D1FBA1AD9009FA13A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AB1627D1FAC2ACD00E0F81F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB162951FAC2ACE00E0F81F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB162A01FAC2ACE00E0F81F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7AB162771FAC2ACD00E0F81F = {
+			isa = PBXGroup;
+			children = (
+				7AB162821FAC2ACE00E0F81F /* FlaskRecall */,
+				7AB1629B1FAC2ACE00E0F81F /* FlaskRecallTests */,
+				7AB162A61FAC2ACE00E0F81F /* FlaskRecallUITests */,
+				7AB162811FAC2ACE00E0F81F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7AB162811FAC2ACE00E0F81F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AB162801FAC2ACE00E0F81F /* FlaskRecall.app */,
+				7AB162981FAC2ACE00E0F81F /* FlaskRecallTests.xctest */,
+				7AB162A31FAC2ACE00E0F81F /* FlaskRecallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AB162821FAC2ACE00E0F81F /* FlaskRecall */ = {
+			isa = PBXGroup;
+			children = (
+				7A78E12B1FB17D3800B84752 /* FlaskRecall.entitlements */,
+				7AB162B51FAC326000E0F81F /* Supporting Files */,
+				7AB162B61FAC327600E0F81F /* Other */,
+				7AB162851FAC2ACE00E0F81F /* RootViewController.swift */,
+				7ADED50D1FBA1AD9009FA13A /* PreviewViewController.swift */,
+				7AB162871FAC2ACE00E0F81F /* DataViewController.swift */,
+				7ACE0D431FAC3E98008F24DB /* MainViewController.swift */,
+				7ACE0D441FAC3E98008F24DB /* MainViewController.xib */,
+				7AB162891FAC2ACE00E0F81F /* ModelController.swift */,
+				7AB1628E1FAC2ACE00E0F81F /* Assets.xcassets */,
+				7AB162901FAC2ACE00E0F81F /* LaunchScreen.storyboard */,
+				7ADED5091FB99A7E009FA13A /* BrowserViewController.swift */,
+				7ADED50A1FB99A7E009FA13A /* BrowserViewController.xib */,
+			);
+			path = FlaskRecall;
+			sourceTree = "<group>";
+		};
+		7AB1629B1FAC2ACE00E0F81F /* FlaskRecallTests */ = {
+			isa = PBXGroup;
+			children = (
+				7AB1629C1FAC2ACE00E0F81F /* FlaskRecallTests.swift */,
+				7AB1629E1FAC2ACE00E0F81F /* Info.plist */,
+			);
+			path = FlaskRecallTests;
+			sourceTree = "<group>";
+		};
+		7AB162A61FAC2ACE00E0F81F /* FlaskRecallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7AB162A71FAC2ACE00E0F81F /* FlaskRecallUITests.swift */,
+				7AB162A91FAC2ACE00E0F81F /* Info.plist */,
+			);
+			path = FlaskRecallUITests;
+			sourceTree = "<group>";
+		};
+		7AB162B51FAC326000E0F81F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AB162931FAC2ACE00E0F81F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7AB162B61FAC327600E0F81F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7AB162831FAC2ACE00E0F81F /* AppDelegate.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AB1627F1FAC2ACD00E0F81F /* FlaskRecall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AB162AC1FAC2ACE00E0F81F /* Build configuration list for PBXNativeTarget "FlaskRecall" */;
+			buildPhases = (
+				7AB1627C1FAC2ACD00E0F81F /* Sources */,
+				7AB1627D1FAC2ACD00E0F81F /* Frameworks */,
+				7AB1627E1FAC2ACD00E0F81F /* Resources */,
+				7ADED4C51FB97DE6009FA13A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlaskRecall;
+			productName = FlaskRecall;
+			productReference = 7AB162801FAC2ACE00E0F81F /* FlaskRecall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7AB162971FAC2ACE00E0F81F /* FlaskRecallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AB162AF1FAC2ACE00E0F81F /* Build configuration list for PBXNativeTarget "FlaskRecallTests" */;
+			buildPhases = (
+				7AB162941FAC2ACE00E0F81F /* Sources */,
+				7AB162951FAC2ACE00E0F81F /* Frameworks */,
+				7AB162961FAC2ACE00E0F81F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AB1629A1FAC2ACE00E0F81F /* PBXTargetDependency */,
+			);
+			name = FlaskRecallTests;
+			productName = FlaskRecallTests;
+			productReference = 7AB162981FAC2ACE00E0F81F /* FlaskRecallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7AB162A21FAC2ACE00E0F81F /* FlaskRecallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AB162B21FAC2ACE00E0F81F /* Build configuration list for PBXNativeTarget "FlaskRecallUITests" */;
+			buildPhases = (
+				7AB1629F1FAC2ACE00E0F81F /* Sources */,
+				7AB162A01FAC2ACE00E0F81F /* Frameworks */,
+				7AB162A11FAC2ACE00E0F81F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AB162A51FAC2ACE00E0F81F /* PBXTargetDependency */,
+			);
+			name = FlaskRecallUITests;
+			productName = FlaskRecallUITests;
+			productReference = 7AB162A31FAC2ACE00E0F81F /* FlaskRecallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AB162781FAC2ACD00E0F81F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Michael Lee";
+				TargetAttributes = {
+					7AB1627F1FAC2ACD00E0F81F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 66VR475WF9;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					7AB162971FAC2ACE00E0F81F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 66VR475WF9;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7AB1627F1FAC2ACD00E0F81F;
+					};
+					7AB162A21FAC2ACE00E0F81F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 66VR475WF9;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7AB1627F1FAC2ACD00E0F81F;
+					};
+				};
+			};
+			buildConfigurationList = 7AB1627B1FAC2ACD00E0F81F /* Build configuration list for PBXProject "FlaskRecall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AB162771FAC2ACD00E0F81F;
+			productRefGroup = 7AB162811FAC2ACE00E0F81F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AB1627F1FAC2ACD00E0F81F /* FlaskRecall */,
+				7AB162971FAC2ACE00E0F81F /* FlaskRecallTests */,
+				7AB162A21FAC2ACE00E0F81F /* FlaskRecallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AB1627E1FAC2ACD00E0F81F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB162921FAC2ACE00E0F81F /* LaunchScreen.storyboard in Resources */,
+				7ADED50C1FB99A7E009FA13A /* BrowserViewController.xib in Resources */,
+				7ACE0D461FAC3E98008F24DB /* MainViewController.xib in Resources */,
+				7AB1628F1FAC2ACE00E0F81F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB162961FAC2ACE00E0F81F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB162A11FAC2ACE00E0F81F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AB1627C1FAC2ACD00E0F81F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB162861FAC2ACE00E0F81F /* RootViewController.swift in Sources */,
+				7ADED50B1FB99A7E009FA13A /* BrowserViewController.swift in Sources */,
+				7ADED50E1FBA1AD9009FA13A /* PreviewViewController.swift in Sources */,
+				7AB1628A1FAC2ACE00E0F81F /* ModelController.swift in Sources */,
+				7AB162881FAC2ACE00E0F81F /* DataViewController.swift in Sources */,
+				7AB162841FAC2ACE00E0F81F /* AppDelegate.swift in Sources */,
+				7ACE0D451FAC3E98008F24DB /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB162941FAC2ACE00E0F81F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB1629D1FAC2ACE00E0F81F /* FlaskRecallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB1629F1FAC2ACE00E0F81F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB162A81FAC2ACE00E0F81F /* FlaskRecallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AB1629A1FAC2ACE00E0F81F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AB1627F1FAC2ACD00E0F81F /* FlaskRecall */;
+			targetProxy = 7AB162991FAC2ACE00E0F81F /* PBXContainerItemProxy */;
+		};
+		7AB162A51FAC2ACE00E0F81F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AB1627F1FAC2ACD00E0F81F /* FlaskRecall */;
+			targetProxy = 7AB162A41FAC2ACE00E0F81F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7AB162901FAC2ACE00E0F81F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AB162911FAC2ACE00E0F81F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7AB162AA1FAC2ACE00E0F81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AB162AB1FAC2ACE00E0F81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AB162AD1FAC2ACE00E0F81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FlaskRecall/FlaskRecall.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 66VR475WF9;
+				INFOPLIST_FILE = FlaskRecall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.what.FlaskRecall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		7AB162AE1FAC2ACE00E0F81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FlaskRecall/FlaskRecall.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 66VR475WF9;
+				INFOPLIST_FILE = FlaskRecall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.what.FlaskRecall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		7AB162B01FAC2ACE00E0F81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 66VR475WF9;
+				INFOPLIST_FILE = FlaskRecallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.what.FlaskRecallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlaskRecall.app/FlaskRecall";
+			};
+			name = Debug;
+		};
+		7AB162B11FAC2ACE00E0F81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 66VR475WF9;
+				INFOPLIST_FILE = FlaskRecallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.what.FlaskRecallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlaskRecall.app/FlaskRecall";
+			};
+			name = Release;
+		};
+		7AB162B31FAC2ACE00E0F81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 66VR475WF9;
+				INFOPLIST_FILE = FlaskRecallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.what.FlaskRecallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = FlaskRecall;
+			};
+			name = Debug;
+		};
+		7AB162B41FAC2ACE00E0F81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 66VR475WF9;
+				INFOPLIST_FILE = FlaskRecallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.what.FlaskRecallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = FlaskRecall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AB1627B1FAC2ACD00E0F81F /* Build configuration list for PBXProject "FlaskRecall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AB162AA1FAC2ACE00E0F81F /* Debug */,
+				7AB162AB1FAC2ACE00E0F81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AB162AC1FAC2ACE00E0F81F /* Build configuration list for PBXNativeTarget "FlaskRecall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AB162AD1FAC2ACE00E0F81F /* Debug */,
+				7AB162AE1FAC2ACE00E0F81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AB162AF1FAC2ACE00E0F81F /* Build configuration list for PBXNativeTarget "FlaskRecallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AB162B01FAC2ACE00E0F81F /* Debug */,
+				7AB162B11FAC2ACE00E0F81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AB162B21FAC2ACE00E0F81F /* Build configuration list for PBXNativeTarget "FlaskRecallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AB162B31FAC2ACE00E0F81F /* Debug */,
+				7AB162B41FAC2ACE00E0F81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AB162781FAC2ACD00E0F81F /* Project object */;
+}
