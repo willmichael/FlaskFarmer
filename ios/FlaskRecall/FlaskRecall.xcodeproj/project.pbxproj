@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A185F3A1FC6A56700543F84 /* RecallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A185F391FC6A56700543F84 /* RecallController.swift */; };
+		7A185F3D1FC6A97800543F84 /* GenericRecallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A185F3C1FC6A97800543F84 /* GenericRecallCell.swift */; };
+		7A185F421FC6B23F00543F84 /* StageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A185F411FC6B23F00543F84 /* StageController.swift */; };
 		7AB162841FAC2ACE00E0F81F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162831FAC2ACE00E0F81F /* AppDelegate.swift */; };
 		7AB162861FAC2ACE00E0F81F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162851FAC2ACE00E0F81F /* RootViewController.swift */; };
 		7AB162881FAC2ACE00E0F81F /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB162871FAC2ACE00E0F81F /* DataViewController.swift */; };
@@ -20,6 +23,7 @@
 		7ADED50B1FB99A7E009FA13A /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADED5091FB99A7E009FA13A /* BrowserViewController.swift */; };
 		7ADED50C1FB99A7E009FA13A /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADED50A1FB99A7E009FA13A /* BrowserViewController.xib */; };
 		7ADED50E1FBA1AD9009FA13A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADED50D1FBA1AD9009FA13A /* PreviewViewController.swift */; };
+		7ADED5101FBD0434009FA13A /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADED50F1FBD0434009FA13A /* PreviewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A185F391FC6A56700543F84 /* RecallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallController.swift; sourceTree = "<group>"; };
+		7A185F3C1FC6A97800543F84 /* GenericRecallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRecallCell.swift; sourceTree = "<group>"; };
+		7A185F411FC6B23F00543F84 /* StageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageController.swift; sourceTree = "<group>"; };
 		7A78E12B1FB17D3800B84752 /* FlaskRecall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlaskRecall.entitlements; sourceTree = "<group>"; };
 		7AB162801FAC2ACE00E0F81F /* FlaskRecall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlaskRecall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB162831FAC2ACE00E0F81F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +80,7 @@
 		7ADED5091FB99A7E009FA13A /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		7ADED50A1FB99A7E009FA13A /* BrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowserViewController.xib; sourceTree = "<group>"; };
 		7ADED50D1FBA1AD9009FA13A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		7ADED50F1FBD0434009FA13A /* PreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A185F3B1FC6A91F00543F84 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A185F391FC6A56700543F84 /* RecallController.swift */,
+				7A185F411FC6B23F00543F84 /* StageController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7A185F3E1FC6A98100543F84 /* RecallCell */ = {
+			isa = PBXGroup;
+			children = (
+				7A185F3C1FC6A97800543F84 /* GenericRecallCell.swift */,
+			);
+			name = RecallCell;
+			sourceTree = "<group>";
+		};
 		7AB162771FAC2ACD00E0F81F = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +153,9 @@
 				7AB162B61FAC327600E0F81F /* Other */,
 				7AB162851FAC2ACE00E0F81F /* RootViewController.swift */,
 				7ADED50D1FBA1AD9009FA13A /* PreviewViewController.swift */,
+				7A185F3E1FC6A98100543F84 /* RecallCell */,
+				7A185F3B1FC6A91F00543F84 /* View Controllers */,
+				7ADED50F1FBD0434009FA13A /* PreviewViewController.xib */,
 				7AB162871FAC2ACE00E0F81F /* DataViewController.swift */,
 				7ACE0D431FAC3E98008F24DB /* MainViewController.swift */,
 				7ACE0D441FAC3E98008F24DB /* MainViewController.xib */,
@@ -297,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB162921FAC2ACE00E0F81F /* LaunchScreen.storyboard in Resources */,
+				7ADED5101FBD0434009FA13A /* PreviewViewController.xib in Resources */,
 				7ADED50C1FB99A7E009FA13A /* BrowserViewController.xib in Resources */,
 				7ACE0D461FAC3E98008F24DB /* MainViewController.xib in Resources */,
 				7AB1628F1FAC2ACE00E0F81F /* Assets.xcassets in Resources */,
@@ -324,10 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A185F3A1FC6A56700543F84 /* RecallController.swift in Sources */,
 				7AB162861FAC2ACE00E0F81F /* RootViewController.swift in Sources */,
 				7ADED50B1FB99A7E009FA13A /* BrowserViewController.swift in Sources */,
 				7ADED50E1FBA1AD9009FA13A /* PreviewViewController.swift in Sources */,
+				7A185F421FC6B23F00543F84 /* StageController.swift in Sources */,
 				7AB1628A1FAC2ACE00E0F81F /* ModelController.swift in Sources */,
+				7A185F3D1FC6A97800543F84 /* GenericRecallCell.swift in Sources */,
 				7AB162881FAC2ACE00E0F81F /* DataViewController.swift in Sources */,
 				7AB162841FAC2ACE00E0F81F /* AppDelegate.swift in Sources */,
 				7ACE0D451FAC3E98008F24DB /* MainViewController.swift in Sources */,

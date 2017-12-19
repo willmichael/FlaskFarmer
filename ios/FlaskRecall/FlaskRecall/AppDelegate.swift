@@ -21,29 +21,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 
         let navigationBarApperance = UINavigationBar.appearance()
-        navigationBarApperance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.orange]
+        navigationBarApperance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.red]
         navigationBarApperance.tintColor = .gray
+
 
         let tabBarController = UITabBarController()
         let tabViewController1 = MainViewController()
-        let tabViewController2 = UIViewController()
-        let tabViewController3 = UIViewController()
-        let tabViewController4 = UIViewController()
+        let tabViewController2 = RecallController()
+        let tabViewController3 = PreviewViewController()
+        let rvController = UIViewController()
 
         let navigationController1 = UINavigationController(rootViewController: tabViewController1)
         let navigationController2 = UINavigationController(rootViewController: tabViewController2)
         let navigationController3 = UINavigationController(rootViewController: tabViewController3)
-        let navigationController4 = UINavigationController(rootViewController: tabViewController4)
+        let navRVController = UINavigationController(rootViewController: rvController)
 
+//        let controllers = [tabViewController1, tabViewController2, tabViewController3, navRVController]
         let controllers = [navigationController1, navigationController2, navigationController3]
-        tabBarController.viewControllers = controllers
-        tabBarController.tabBar.tintColor = .orange
 
+        tabBarController.viewControllers = controllers
+        tabBarController.tabBar.tintColor = .red
 
         navigationController1.tabBarItem = UITabBarItem(title: "Beggining", image: #imageLiteral(resourceName: "icon_home_2x"), selectedImage: nil)
         navigationController2.tabBarItem = UITabBarItem(title: "Middle", image: #imageLiteral(resourceName: "icon_home_2x"), selectedImage: nil)
         navigationController3.tabBarItem = UITabBarItem(title: "End", image: #imageLiteral(resourceName: "icon_home_2x"), selectedImage: nil)
-        navigationController4.tabBarItem = UITabBarItem(title: "Account", image: #imageLiteral(resourceName: "icon_home_2x"), selectedImage: nil)
+//        navigationController4.tabBarItem = UITabBarItem(title: "Account", image: #imageLiteral(resourceName: "icon_home_2x"), selectedImage: nil)
 
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
@@ -59,8 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let previewController = PreviewViewController()
         previewController.fileURL = inputURL
 
-        
+        print("almost there")
 
+
+
+        print("not here")
 
 //        browserController.revealDocument(at: inputURL, importIfNeeded: true) {
 //            (revealedDocumentURL, error) in

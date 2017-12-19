@@ -29,9 +29,11 @@ class MainViewController: UIViewController, UIDocumentPickerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Home"
 
         // Do any additional setup after loading the view.
     }
+
     @IBAction func listDocuments(_ sender: Any) {
         do {
             let documentDirectory = try self.fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
