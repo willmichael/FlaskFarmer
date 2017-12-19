@@ -10,9 +10,11 @@ from flask_httpauth import HTTPBasicAuth
 
 import jwt
 
+from project.server import app, auth
+
 # Basic Setup
-app = Flask(__name__)
-auth = HTTPBasicAuth()
+# app = Flask(__name__)
+# auth = HTTPBasicAuth()
 
 # Properties
 prefix = "/api/"
