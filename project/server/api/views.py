@@ -92,16 +92,6 @@ collection = db.test_collection
 
 # post_id = collection.insert_one(post).inserted_id
 
-@app.route('/api/test', methods = ['GET'])
-def test():
-    return "un-restricted ea"
-
-@app.route('/api/test_auth', methods = ['GET'])
-@auth.login_required
-def test_auth():
-    return "restricted area"
-
-
 @app.route('/api/get_file', methods = ['POST'])
 @auth.login_required
 def get_file():
@@ -163,19 +153,6 @@ def create_user():
             os.makedirs(fp)
 
     return "1"
-
-
-### MARK: Login/Authentication
-@auth.verify_password
-def verify_password(username, password):
-    # TODO: implement verify password (do hashing first)
-    result = db.test_collection.find_one({"user_name": username})
-    if result != None:
-        if result["pass"] == password:
-            return True
-    return False
-
-### MARK: Token authenication
 
 
 ### MARK: Helper functions

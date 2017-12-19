@@ -6,7 +6,6 @@ import coverage
 
 from flask_script import Manager
 
-
 COV = coverage.coverage(
     branch=True,
     include='project/*',
@@ -22,8 +21,7 @@ COV.start()
 
 from project.server import app
 
-manage = Manager(app)
-
+manager = Manager(app)
 
 @manager.command
 def test():
