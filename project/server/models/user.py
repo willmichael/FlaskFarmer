@@ -7,13 +7,15 @@ import logging
 from server import app
 
 class User():
-    def __init__(self, username, password, email, form_type=0):
+    def __init__(self, _id, username, password, email, form_type=0):
+        self._id = _id
         self.username = username
         self.password = password
         self.email = email
         self.form_type = form_type
 
-    def encode_auth_token(self, user_id):
+    @staticmethod
+    def encode_auth_token(user_id):
         '''
         Generates Authentication Token for user based on JSON Web Tokens
         https://realpython.com/blog/python/token-based-authentication-with-flask/

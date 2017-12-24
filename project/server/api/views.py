@@ -2,7 +2,7 @@
 
 import os
 import json
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, jsonify
 from flask_restful import Resource, Api
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -10,9 +10,11 @@ from bson import Binary
 from flask import send_file
 from flask_httpauth import HTTPBasicAuth
 
+from server.auth.views import authorize
+
 import jwt
 
-from server import app, auth
+from server import app, auth, mongo
 
 # Basic Setup
 # app = Flask(__name__)
@@ -57,6 +59,23 @@ class UserPaths():
             for file_dirs in dirs[1]:
                 self.stages[i].append("%s/%s" % (sd,file_dirs))
 
+@app.route('/api/test', methods = ['GET'])
+def test():
+    responseObject = {
+        'status': 'success',
+        'message': 'public',
+    }
+    return make_response(jsonify(responseObject)), 200
+
+
+@app.route('/api/test_auth', methods = ['GET'])
+@authorize
+def test_auth(userid):
+    responseObject = {
+        'status': 'success',
+        'message': 'private',
+    }
+    return make_response(jsonify(responseObject)), 200
 
 class UserInfo():
     ''' User information'''
@@ -82,9 +101,9 @@ class FileInfo():
 
 
 ### Setup db connections
-client = MongoClient('localhost', 27017)
-db = client.test_database
-collection = db.test_collection
+# client = mongoclient('localhost', 27017)
+# db = client.test_database
+# collection = db.test_collection
 
 ### insert binary into db
 # post = {"file_name": file_name,
@@ -93,7 +112,7 @@ collection = db.test_collection
 # post_id = collection.insert_one(post).inserted_id
 
 @app.route('/api/get_file', methods = ['POST'])
-@auth.login_required
+# @auth.login_required
 def get_file():
     # TODO: user authentication somehow to get uid
     # JSON test

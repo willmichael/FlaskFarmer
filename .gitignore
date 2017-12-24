@@ -2,7 +2,7 @@
 /venv
 
 # compiled
-.pyc
+*.pyc
 
 # testing
 /users

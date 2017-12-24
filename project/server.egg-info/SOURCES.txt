@@ -1,6 +1,6 @@
 server/__init__.py
+server/config.py
 server/old.py
-server/views.py
 server.egg-info/PKG-INFO
 server.egg-info/SOURCES.txt
 server.egg-info/dependency_links.txt
