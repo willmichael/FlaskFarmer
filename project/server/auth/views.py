@@ -12,6 +12,8 @@ from pymongo import ReturnDocument
 
 from server import app, auth, mongo
 from server.models.user import User
+from bson import Binary
+import bson
 
 def authorize(f):
     @wraps(f)
@@ -29,7 +31,7 @@ def authorize(f):
         else:
             responseObject = {
                 'status': 'fail',
-                'message': 'no auth'
+                'message': 'please login'
             }
             return make_response(jsonify(responseObject)), 401
         if auth_token:
@@ -38,7 +40,7 @@ def authorize(f):
         else:
             responseObject = {
                 'status': 'fail',
-                'message': 'no auth'
+                'message': 'no auth token'
             }
             return make_response(jsonify(responseObject)), 401
     return decorate_function
@@ -46,6 +48,9 @@ def authorize(f):
 
 @app.route('/auth/login', methods = ['POST'])
 def login():
+    '''
+    User Login
+    '''
     post_data = request.get_json()
     try:
         result = mongo.db.users.find_one({'username': post_data["username"]})
@@ -74,6 +79,9 @@ def login():
 
 @app.route('/auth/register', methods = ['POST'])
 def register():
+    '''
+    User registration
+    '''
     post_data = request.get_json()
     result = mongo.db.users.find_one({'username': post_data["username"]})
     if result == None:
@@ -91,6 +99,9 @@ def register():
             mongo.db.users.insert_one(user_json)
             auth_token = user.encode_auth_token(uid)
 
+            # Copy file to Directory
+            store_files(uid)
+
             responseObject = {
                 'status': 'success',
                 'message': 'Registered User',
@@ -99,6 +110,10 @@ def register():
             return make_response(jsonify(responseObject)), 201
         except Exception as e:
             # TODO: logging error
+
+            print e
+            result = mongo.db.users.delete_one(user_json)
+            print result.deleted_count
             responseObject = {
                 'status': 'fail',
                 'message': 'error registering, please try again'
@@ -112,34 +127,45 @@ def register():
         return make_response(jsonify(responseObject)), 202
 
 
-### MARK: Login/Authentication
-# @auth.verify_password
-def verify_password(username, password):
-    # TODO: implement verify password (do hashing first)
-    result = mongo.db.test_collection.find_one({"user_name": username})
-    if result != None:
-        if result["pass"] == password:
-            return True
-    return False
-
-
-### MARK: Helpers
-def json_decoder(obj):
-    if '__type__' in obj and obj['__type__'] == 'fileinfo':
-        return FileInfo(obj['file'], obj['stage'])
-    elif '__type__' in obj and obj['__type__'] == 'newuser':
-        uid = generate_uid()
-        return UserInfo(uid, obj['user_name'], obj['user_pass'], obj['name'], obj['user_type'], obj['email'])
-    elif '__type__' in obj and obj['__type__'] == 'userinfo':
-        return UserInfo(obj['uid'], obj['user_name'], obj['user_pass'], obj['name'], obj['user_type'], obj['email'])
-    return obj
-
-
+# Helper Function
 def getNextSequence(name):
-   ret = mongo.db.counters.find_one_and_update(
+    '''
+    Gets next user id
+    '''
+    ret = mongo.db.counters.find_one_and_update(
             { "_id": name },
             { "$inc": { "seq": 1 } },
             return_document = ReturnDocument.AFTER
-   )
-   return ret["seq"]
+    )
+    return ret["seq"]
 
+def store_files(userid):
+    '''
+    Copies files from local computer to mongo database
+    '''
+    oldcwd = os.getcwd()
+    os.chdir("/Users/WillMichael/Documents/git/FlaskFarmer/project/server/auth")
+    file_paths = [
+        "../files/test.csv",
+        "../files/Mock/1/APPENDIX A- Recall Team_MR.xlsx",
+        "../files/Mock/1/APPENDIX B-Agency-Press-Supplier-Customer Contact List_MR.xlsx",
+        "../files/Mock/1/APPENDIX D-General Communication Log_MR.xlsx",
+        "../files/Mock/1/APPENDIX H-Ingredients Receipts Record_MR.xlsx",
+        "../files/Mock/1/APPENDIX I-Production Batch Sheet_MR.xlsx",
+        "../files/Mock/1/APPENDIX K-Product Distribution record_MR.xlsx",
+        "../files/Mock/1/APPENDIX N-Product Reconciliation_MR.xlsx",
+        "../files/Mock/1/Mock Recall/APPENDIX G1-Mock Recall Record_MR.xlsx",
+        "../files/Mock/1/Mock Recall/APPENDIX G2-Mock Recall Log_MR.xlsx",
+        "../files/Mock/1/Mock Recall/APPENDIX O3-Recall Notification via Phone_MR.docx"
+    ]
+    for idx, fp in enumerate(file_paths):
+        fo = open(fp, 'r')
+        bin_file = fo.read()
+
+        data = {
+            "userid": userid,
+            "docid": idx,
+            "data": Binary(bin_file)
+        }
+        mongo.db.documents.insert_one(data)
+    os.chdir(oldcwd)

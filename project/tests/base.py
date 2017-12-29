@@ -26,3 +26,4 @@ class BaseTestCase(TestCase):
     def tearDown(self):
         mongo.db.users.drop()
         mongo.db.counters.drop()
+        mongo.db.documents.drop()
